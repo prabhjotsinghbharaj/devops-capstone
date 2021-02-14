@@ -4,7 +4,7 @@ pipeline {
         VERSION = 'latest'
         PROJECT = 'capstone-sample-app'
 				IMAGE = "$PROJECT"
-				ECRURL = "653040145868.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
+				ECRURL = "https://653040145868.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
 				ECRURI = "653040145868.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
 				ECRCRED = 'ecr:us-west-2:jenkins'
   }
