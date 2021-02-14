@@ -1,0 +1,14 @@
+Description: >
+  Prabhjot's Project
+  This cloudformation template defines the container registry
+
+Parameters:
+  RepositoryName:
+    Type: String
+    Description: The name of the ECR Repository
+
+Resources:
+  ElasticContainerRegistry:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: !Ref RepositoryName

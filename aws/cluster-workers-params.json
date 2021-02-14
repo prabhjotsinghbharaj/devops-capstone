@@ -1,0 +1,34 @@
+[
+	{
+		"ParameterKey": "KeyName",
+		"ParameterValue": "jenkins"
+	},
+	{
+		"ParameterKey": "OnDemandBootstrapArguments",
+		"ParameterValue": "--kubelet-extra-args --node-labels=lifecycle=OnDemand"
+	},
+	{
+		"ParameterKey": "NodeImageId",
+		"ParameterValue": "ami-09729f03d2b24317c"
+	},
+	{
+		"ParameterKey": "OnDemandNodeInstanceType",
+		"ParameterValue": "t2.medium"
+	},
+	{
+		"ParameterKey": "ClusterName",
+		"ParameterValue": "UdacityCapStone-Cluster"
+	},
+	{
+		"ParameterKey": "ClusterControlPlaneSecurityGroup",
+		"ParameterValue": "sg-06021f7c4afea975a"
+	},
+	{
+		"ParameterKey": "VpcId",
+		"ParameterValue": "vpc-0a5aafe1d041ad5ee"
+	},
+	{
+		"ParameterKey": "Subnets",
+		"ParameterValue": "subnet-0acc6ece1328eb8d9,subnet-0c30e66f5358f3a88,subnet-0681f99deaab81dfb"
+	}
+]

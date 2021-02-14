@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapUsers: |
+    - userarn: arn:aws:iam::653040145868:user/jenkins
+      username: jenkins
+      groups:
+        - system:masters
+  mapRoles: |
+    - rolearn: arn:aws:iam::653040145868:role/UdacityCapStone-K8S-Workers-NodeInstanceRole-1F1QRQ1TFDIMK
+      username: system:node:{{EC2PrivateDNSName}}
+      groups:
+        - system:bootstrappers
+        - system:nodes
