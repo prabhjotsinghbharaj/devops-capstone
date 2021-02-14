@@ -4,14 +4,15 @@ pipeline {
         VERSION = 'latest'
         PROJECT = 'capstone-sample-app'
 				IMAGE = "$PROJECT"
-				ECRURL = "https://653040145868.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
+				ECRURL = "https://251557857946.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
 				ECRURI = "653040145868.dkr.ecr.us-west-2.amazonaws.com/$PROJECT"
 				ECRCRED = 'ecr:us-west-2:jenkins'
   }
 	stages {
 		stage("Lint Dockerfile") {
 			steps {
-				sh "docker run --rm -i hadolint/hadolint:v1.17.5 < Dockerfile"
+				sh "wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 && chmod +x ./hadolint"
+				sh "./hadolint Dockerfile"
 			}
 		}
 		stage('Build preparations') {
